@@ -11,10 +11,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+	@GetMapping("/")
+	public String index() {
+
+		return "index";
+	}
 	@GetMapping("/hello")
 	public String hello() {
 
 		return "hello";
+	}
+
+	@GetMapping("/user/a")
+	public String usera() {
+
+		return "资源a";
+	}
+	@GetMapping("/admin/b")
+	public String adminb() {
+		return "资源b";
 	}
 
 }
